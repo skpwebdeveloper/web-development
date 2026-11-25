@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow – Simple To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div>
+        <h1>TaskFlow</h1>
+        <p class="subtitle" id="date"></p>
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="What do you need to do?"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="btn">Add</button>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Done</button>
+    </nav>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <footer class="app-footer">
+      <span id="counter">0 tasks left</span>
+      <button id="clear-done" class="link-btn">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
